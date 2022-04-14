@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Email">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JAR包/email/mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JAR包/email/activation.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

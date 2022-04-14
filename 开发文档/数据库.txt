@@ -1,0 +1,32 @@
+ 数据库设计
+ 表名：UserInfo
+ id 用户id 递增
+ nickname  用户昵称 16
+ qq 用户qq 32
+ password 用户密码（md5） 128
+ likeItems 用户喜欢 10240
+ power 用户权限 int    1则为管理员  0为普通用户
+ regDate 注册时间 DateTime
+
+表名：Code
+qq 用户qq
+verCode 验证码 8
+cookie cookie 32
+regDate cookie更新时间 DateTime
+
+表名：Music
+id  音乐id int 递增
+musicName 音乐名称 32
+pathString 音乐文件路径 32
+heat 音乐热度 int
+regDate 音乐日期 DateTime
+
+关联表：Music_type
+id int
+type_hash int
+musicType 音乐类型32
+
+关联表：Music_singer
+id int
+singer_hash int
+musicSinger 歌手 32

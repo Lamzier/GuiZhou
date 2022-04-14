@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="GuiZhou">
+    <output-path>$PROJECT_DIR$/out/artifacts/GuiZhou</output-path>
+    <root id="archive" name="GuiZhou.war">
+      <element id="javaee-facet-resources" facet="GuiZhou/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="GuiZhou" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Email" />
+          <element id="library" level="project" name="Mysql" />
+          <element id="library" level="project" name="Fileupload" />
+          <element id="library" level="project" name="Jsp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

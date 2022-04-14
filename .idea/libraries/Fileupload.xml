@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Fileupload">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JAR包/tomcat文件传输/commons-io-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../JAR包/tomcat文件传输/commons-fileupload-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
