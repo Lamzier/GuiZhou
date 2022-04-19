@@ -10,6 +10,40 @@ import static main.java.mysql.Start.MYSQL_CHARSET;
 public class Update {
 
     /**
+     * 修改用户密码
+     */
+    public static boolean changeUserPassword(String qq , String passowrd){
+        java.util.Date startDate = new java.util.Date();
+        String sql = "UPDATE `UserInfo` SET `password` = ? WHERE `qq` = ? ;";
+        Connection connection = Start.getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,passowrd);
+            preparedStatement.setString(2,qq);
+            if(preparedStatement.executeUpdate() < 1) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("用户密码修改(" + qq + ")失败！");
+            Start.reConnection();//重连数据库
+            return false;
+        }finally {
+            try {
+                if(preparedStatement != null) {
+                    preparedStatement.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("Statement关闭失败！");
+            }
+        }
+        java.util.Date endDate = new java.util.Date();
+        long span = endDate.getTime() - startDate.getTime();
+        System.out.println("用户密码修改(" + qq + ")成功！耗时：" + span + "毫秒");
+        return true;
+    }
+
+    /**
      * 音乐热度+1
      */
     public static boolean updMusicHeat(int id){

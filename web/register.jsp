@@ -109,7 +109,6 @@
         }
         //发送验证码
         String Code = main.java.business.Cookie.getCode();
-
         String Cookie = main.java.business.Cookie.getCookie();
         if (!mysql.QandU.updCode(QQ,Code,Cookie)){
             out.println("<script> alert(\"内部异常！！\")</script>");

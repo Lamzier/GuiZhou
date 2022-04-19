@@ -27,6 +27,36 @@
 <section class="rt_wrap content mCustomScrollbar" style="overflow-y: scroll;overflow-x: hidden;">
     <div class="rt_content" style="margin: 30px;">
         <h1><strong style="color:grey;font-size: 32px;">基础设置</strong></h1>
+        <form action="changepassword" method="post" accept-charset="utf-8" onsubmit="return cpsw()">
+
+            <h2 style="font-size: 20px;padding: 10px;">修改密码</h2>
+            <ul class="ulColumn2" style="font-size: 16px;" id="changePasswordForm">
+                <li>
+                    <span class="item_name" style="width:120px;">您的密码：</span>
+                    <input type="password" name="password" id="changePassword"/>
+                </li>
+                <li>
+                    <span class="item_name" style="width:120px;">确认密码：</span>
+                    <input type="password" id="changePssword2"/>
+                </li>
+            </ul>
+            <input type="submit" style="padding: 10px;font-weight: bolder;" value="确认修改密码" />
+        </form>
+        <script>
+            function cpsw(){
+                const psw = document.getElementById("changePassword").value;
+                const psw2 = document.getElementById("changePssword2").value;
+                if(psw !== psw2){
+                    window.alert("密码不一致")
+                    return false
+                }
+                if (psw.length <= 5){
+                    window.alert("密码长度不能小于5")
+                    return false
+                }
+                return true
+            }
+        </script>
         <h2 style="font-size: 20px;padding: 10px;"><a href="outlogin.jsp">登出</a></h2>
     </div>
     <jsp:include page="../bottom.jsp" />
