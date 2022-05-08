@@ -67,7 +67,7 @@ public class ChangePassword  extends HttpServlet {
             out.println("<script> alert(\"运行时异常!\");location.href=\"setting.jsp\"</script>");
             return;
         }
-        out.println("<script> alert(\"修改成功，请重新登陆!\";location.href=\"../login.jsp\")</script>");
+        out.println("<script> alert(\"修改成功，请重新登陆!\");location.href=\"../login.jsp\"</script>");
         main.java.business.Cookie.removeCookieAll(cookies,resp);//清除cookie
         resp.sendRedirect("../login.jsp");
     }

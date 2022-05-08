@@ -27,6 +27,19 @@
 <section class="rt_wrap content mCustomScrollbar" style="overflow-y: scroll;overflow-x: hidden;">
     <div class="rt_content" style="margin: 30px;">
         <h1><strong style="color:grey;font-size: 32px;">基础设置</strong></h1>
+<%--        修改用户名--%>
+        <form action="changeinfo" method="post" accept-charset="utf-8">
+            <h2 style="font-size: 20px;padding: 10px;">修改昵称</h2>
+            <ul class="ulColumn2" style="font-size: 16px;">
+                <li>
+                    <span class="item_name" style="width:120px;">您的昵称：</span>
+                    <input type="text" name="nickname" value="<%=userinfo.get("nickname")%>"/>
+                </li>
+            </ul>
+            <input type="submit" style="padding: 10px;font-weight: bolder;" value="保存" />
+        </form>
+        <hr />
+<%--        修改密码--%>
         <form action="changepassword" method="post" accept-charset="utf-8" onsubmit="return cpsw()">
 
             <h2 style="font-size: 20px;padding: 10px;">修改密码</h2>
@@ -55,6 +68,7 @@
                     return false
                 }
                 return true
+
             }
         </script>
         <h2 style="font-size: 20px;padding: 10px;"><a href="outlogin.jsp">登出</a></h2>

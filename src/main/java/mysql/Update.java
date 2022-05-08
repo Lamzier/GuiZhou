@@ -4,10 +4,43 @@ import main.java.business.FinalAll;
 import java.io.File;
 import java.sql.*;
 import java.util.List;
-
 import static main.java.mysql.Start.MYSQL_CHARSET;
 
 public class Update {
+
+    /**
+     * 修改用户信息
+     */
+    public static boolean changeUserInfo(String qq, String nickname){
+        java.util.Date startDate = new java.util.Date();
+        String sql = "UPDATE `UserInfo` SET `nickname` = ? WHERE `qq` = ? ;";
+        Connection connection = Start.getConnection();
+        PreparedStatement preparedStatement = null;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,nickname);
+            preparedStatement.setString(2,qq);
+            if(preparedStatement.executeUpdate() < 1) return false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("用户昵称修改(" + qq + ")失败！");
+            Start.reConnection();//重连数据库
+            return false;
+        }finally {
+            try {
+                if(preparedStatement != null) {
+                    preparedStatement.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.out.println("Statement关闭失败！");
+            }
+        }
+        java.util.Date endDate = new java.util.Date();
+        long span = endDate.getTime() - startDate.getTime();
+        System.out.println("用户昵称修改(" + qq + ")成功！耗时：" + span + "毫秒");
+        return true;
+    }
 
     /**
      * 修改用户密码

@@ -64,7 +64,7 @@
                 <li>
                     <span>
                         <a href="<%=request.getContextPath() + "/searchMusic.jsp"%>" <%=index == 2 ? "class=\"z-slt\"" : ""%>>
-                            <em>我的音乐</em>
+                            <em>搜索音乐</em>
                             <sub class="cor">&nbsp;</sub>
                         </a>
                     </span>
@@ -72,7 +72,7 @@
                 <li>
                     <span>
                         <a href="<%=request.getContextPath() + "/user/mylike.jsp"%>" <%=index == 3 ? "class=\"z-slt\"" : ""%>>
-                            <em>关注</em>
+                            <em>我的音乐</em>
                             <sub class="cor">&nbsp;</sub>
                         </a>
                     </span>

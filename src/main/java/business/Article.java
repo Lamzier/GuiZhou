@@ -88,7 +88,7 @@ public class Article {
         stringBuilder.append("<div class=\"u-cover u-cover-1\">");
         Random random = new Random();//用于区分url
 //        stringBuilder.append("<img src=\"https://www.dmoe.cc/random.php?text=" + random.nextInt(100) + "\">");//封面 这是随机封面api，网上找的api
-        stringBuilder.append("<img src=\"https://api.ixiaowai.cn/mcapi/mcapi.php?text=" + random.nextInt(100) + "\">");//封面 这是随机封面api，网上找的api
+        stringBuilder.append("<img src=\"images/music_background/" + random.nextInt(50) + ".jpg\">");//封面 这是随机封面api，网上找的api
         stringBuilder.append("<a title=\"" + musicName + "\" target=\"_black\" href=\"" + path + "\" class=\"msk\"></a>");//标题
         stringBuilder.append("<div class=\"bottom\">");
         stringBuilder.append("<a title=\"播放\" class=\"icon-play f-fr\" href=\"#\"></a>");
@@ -121,7 +121,7 @@ public class Article {
         stringBuilder.append("<li>\n");
         stringBuilder.append("<div class=\"u-cover u-cover-1\">");
         Random random = new Random();//用于区分url
-        stringBuilder.append("<img src=\"https://api.mtyqx.cn/api/random.php?text=" + random.nextInt(100) + "\">");//封面 这是随机封面api，网上找的api
+        stringBuilder.append("<img src=\"images/music_background/" + random.nextInt(50) + ".jpg\">");//封面 这是随机封面api，网上找的api
         stringBuilder.append("<a title=\"" + musicName + "\" target=\"_black\" href=\"" + path + "\" class=\"msk\"></a>");//标题
         stringBuilder.append("<div class=\"bottom\">");
         stringBuilder.append("<a title=\"播放\" class=\"icon-play f-fr\" href=\"#\"></a>");
@@ -150,7 +150,7 @@ public class Article {
         stringBuilder.append("<li>\n");
         stringBuilder.append("<div class=\"u-cover u-cover-1\">");
         Random random = new Random();//用于区分url
-        stringBuilder.append("<img src=\"https://www.dmoe.cc/random.php?text=" + random.nextInt(100) + "\">");//封面 这是随机封面api，网上找的api
+        stringBuilder.append("<img src=\"images/music_background/" + random.nextInt(50) + ".jpg\">");//封面 这是随机封面api，网上找的api
         stringBuilder.append("<a title=\"" + musicName + "\" target=\"_black\" href=\"" + path + "\" class=\"msk\"></a>");//标题
         stringBuilder.append("<div class=\"bottom\">");
         stringBuilder.append("<a title=\"播放\" class=\"icon-play f-fr\" href=\"#\"></a>");
